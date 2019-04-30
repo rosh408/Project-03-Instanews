@@ -5,14 +5,14 @@ const gulp = require("gulp"),
   eslint = require("gulp-eslint");
   prettyError = require("gulp-prettyerror");
 
-  gulp.task("scripts",
-    gulp.series("lint", function() {
-      return gulp
-        .src("./js/*.js")
-        .pipe(terser())
-        .pipe(rename({ extname: ".min.js" }))
-        .pipe(gulp.dest("./build/js"));
-    })
+  gulp.task("lint", function() {
+    return gulp
+    .src("./js/*.js")
+    .pipe(prettyError())
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+  }
   );
 
 gulp.task("scripts", 
