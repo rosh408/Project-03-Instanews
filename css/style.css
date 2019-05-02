@@ -52,6 +52,13 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
+    background-color: black;
+    max-width: 1600px;
+    font-size: 16px;
+}
+
+* {
+    border: 1px solid lightcoral;
 }
 
  /* Main section */
@@ -64,20 +71,14 @@ body {
     justify-content: center;
 }
 
-.nyt-img {
-    order: 1;
-}
-
 .choose-text {
     color: white;
     font-family: "OpenSans", sans-serif;
     font-weight: lighter;
-    order: 2;
-    width: 100vw;
+    font-size: 1.15rem;
 }
 
 .section-list-container {
-    order: 3;
     text-align: center;
 }
 
@@ -89,6 +90,7 @@ body {
 select {
     background: #fff;
     color: #000;
+    font-size: 1rem;
 }
 
 /* Footer Section */
@@ -101,6 +103,55 @@ select {
 .copyright-text {
     font-family: "OpenSans", sans-serif;
     font-weight: lighter;
-    color: white;
     align-self: flex-end;
+    font-size: 1rem;
+    color: gray;
 }
+
+ /* Media Queries for Tablet Version */
+@media (min-width: 600px) {
+
+    /* Main Section */
+    .main-section {
+        flex-direction: row;
+    }
+
+    .options-container {
+        display: flex;
+       flex-direction: column;
+       justify-content: center;
+    }
+
+    /* Footer Section */
+    .footer-section {
+        flex-grow: 0.2;
+    }
+}
+
+ /* Media Queries for Desktop Version */
+ @media (min-width: 1000px) {
+     
+    /* Main Section */
+    .main-section {
+        justify-content: flex-start;
+    }
+
+    .nyt-img {
+        flex-grow: 0.09;        
+    }
+
+    .options-container {
+        flex-grow: 0.2;
+    }
+    
+    /* Footer Section */
+  .footer-section {
+      display: flex;
+  }
+
+  .copyright-text {
+      align-self: center;
+      flex-grow: 0.15;
+  }
+
+ }
