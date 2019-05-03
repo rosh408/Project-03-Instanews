@@ -11,7 +11,13 @@ $(function(){
 
     .done(function(data){ // Start of done function()
       // console.log(data);
-  
+
+      // try filterting data and slicing data 
+      const filterData = data.filter(function(index){
+        return index.
+      });
+
+
       $.each(data.results, function(index, article) {
         // console.log(article);
 
@@ -32,5 +38,3 @@ $(function(){
 }); // End of jQuery doc ready
 
  
-
-
