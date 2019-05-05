@@ -376,7 +376,6 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-height: 100vh;
-  background-color: black;
   color: white;
   max-width: 1600px;
   font-size: 16px; }
@@ -440,14 +439,6 @@ select {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
-.news-abstract {
-  width: 50%; }
-
-/* .news-image {
-
-} */
-/* .style-image {
-} */
 /* Footer Section */
 .footer-section {
   background-color: black;

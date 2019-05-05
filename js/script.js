@@ -10,31 +10,58 @@ $(function(){
     })
 
     .done(function(data){ // Start of done function()
-      // console.log(data);
+      // console.log(data.results);
 
-      // try filterting data and slicing data 
-      const filterData = data.filter(function(index){
-        return index.
+      // filter() and slice()
+      const filterData = data.results.filter(function(article){
+        return article.multimedia[4] !== undefined;
       });
+      const articleLink = filterData.slice(3);
+      $.each(filterData, function(index, article) {
 
-
-      $.each(data.results, function(index, article) {
-        // console.log(article);
-
+        const articleUrl = article.url;
         const articleImage = article.multimedia[4].url;
-        console.log(articleImage);
+        // console.log(articleImage);
 
-        $('.main-section').append(` <div>${article.abstract}</div> `);
-        $('.main-section div').addClass('news-abstract');
-
-        $('.news-abstract').append( `<a href="${articleImage}" style='background-image: rgba(0,0,0,0.3), url("${articleImage}")';></a>` );
-        
+        $('.main-section').append(`
+        <a href="${articleUrl}>
+        <img src="${articleImage}">
+        <div class="text-block">
+        <p>${article.abstract}</p>
+        </div>
+        </a>
+        `);
+        $('.main-section').css({
+          "display": "flex",
+          "flex-direction": "row",
+          "flex-wrap": "wrap",
+          "max-width": "100%"
+        });
+        $('.main-section a').css({
+          // "background-image": " -webkit-gradient(linear, rgba(0,0,0,0.22), rgba(0,0,0,0.22)), url( ' + articleImage + ' )",
+          "height": "22rem",
+          "width": "50%",
+          "position": "relative",
+          "display": "flex",
+          "justify-content": "flex-end",
+          "align-items": "flex-end"
+        });
+        $('.main-section img').css({
+          "width": "10px",
+          "height": "12px"
+        });
+        // console.log($('.main-section img'))
+        $('a').find('div').css({
+          "position": "absolute"
+        });
+        $('p').css({
+        });
       });// End of each
 
     }) // End of done function()
 
   }); // End of click function ()
-  
+
 }); // End of jQuery doc ready
 
  
