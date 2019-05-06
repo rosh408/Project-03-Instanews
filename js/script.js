@@ -17,49 +17,25 @@ $(function(){
         return article.multimedia[4] !== undefined;
       });
       const articleLink = filterData.slice(3);
-      $.each(filterData, function(index, article) {
+      $.each(articleLink, function(index, article) {
 
         const articleUrl = article.url;
         const articleImage = article.multimedia[4].url;
-        // console.log(articleImage);
-
-        $('.main-section').append(`
-        <a href="${articleUrl}>
-        <img src="${articleImage}">
-        <div class="text-block">
-        <p>${article.abstract}</p>
-        </div>
-        </a>
-        `);
-        $('.main-section').css({
-          "display": "flex",
-          "flex-direction": "row",
-          "flex-wrap": "wrap",
-          "max-width": "100%"
-        });
-        $('.main-section a').css({
-          // "background-image": " -webkit-gradient(linear, rgba(0,0,0,0.22), rgba(0,0,0,0.22)), url( ' + articleImage + ' )",
-          "height": "22rem",
-          "width": "50%",
-          "position": "relative",
-          "display": "flex",
-          "justify-content": "flex-end",
-          "align-items": "flex-end"
-        });
-        $('.main-section img').css({
-          "width": "10px",
-          "height": "12px"
-        });
-        // console.log($('.main-section img'))
-        $('a').find('div').css({
-          "position": "absolute"
-        });
-        $('p').css({
-        });
+        const newsTemplate = `<a href="${articleUrl}"><img src="${articleImage}"><div><p>${article.abstract}</p></div></a>`;
+        $('.main-section a').addClass('news-item-container');
+        $('.main-section img').addClass('article-image');
+        $('.main-section div').addClass('text-block');
+        $('.main-section p').addClass('text-block-p');
+        $('.main-section').append(newsTemplate);
       });// End of each
 
     }) // End of done function()
+    .fail(function(){
 
+    }) // End of fail function()
+    .always(function(){
+
+    }) // End of always function()
   }); // End of click function ()
 
 }); // End of jQuery doc ready
