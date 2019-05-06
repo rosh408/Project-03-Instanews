@@ -1,51 +1,3 @@
-@font-face {
-    font-family: 'Open Sans';
-    src: url('OpenSansLight-Italic.eot');
-    src: url('OpenSansLight-Italic.eot?#iefix') format('embedded-opentype'),
-        url('OpenSansLight-Italic.woff2') format('woff2'),
-        url('OpenSansLight-Italic.woff') format('woff'),
-        url('OpenSansLight-Italic.ttf') format('truetype'),
-        url('OpenSansLight-Italic.svg#OpenSansLight-Italic') format('svg');
-    font-weight: 300;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('OpenSans-Bold.eot');
-    src: url('OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
-        url('OpenSans-Bold.woff2') format('woff2'),
-        url('OpenSans-Bold.woff') format('woff'),
-        url('OpenSans-Bold.ttf') format('truetype'),
-        url('OpenSans-Bold.svg#OpenSans-Bold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('OpenSans-Light.eot');
-    src: url('OpenSans-Light.eot?#iefix') format('embedded-opentype'),
-        url('OpenSans-Light.woff2') format('woff2'),
-        url('OpenSans-Light.woff') format('woff'),
-        url('OpenSans-Light.ttf') format('truetype'),
-        url('OpenSans-Light.svg#OpenSans-Light') format('svg');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('OpenSans-BoldItalic.eot');
-    src: url('OpenSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
-        url('OpenSans-BoldItalic.woff2') format('woff2'),
-        url('OpenSans-BoldItalic.woff') format('woff'),
-        url('OpenSans-BoldItalic.ttf') format('truetype'),
-        url('OpenSans-BoldItalic.svg#OpenSans-BoldItalic') format('svg');
-    font-weight: bold;
-    font-style: italic;
-}
-
 /* Mobile Version 450px */
 body {
     display: flex;
@@ -59,7 +11,7 @@ body {
 }
 
 * {
-    border: 1px solid lightcoral;
+    // border: 1px solid lightcoral;
     box-sizing: border-box;
 }
 
@@ -71,7 +23,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    @include tablet {
+    @include tablet{
         justify-content: flex-start;
         flex-direction: row;
     }
@@ -87,6 +39,19 @@ body {
 }
 
 .options-container {
+    .choose-text {
+        color: white;
+        font-family: "OpenSans", sans-serif;
+        font-weight: lighter;
+        font-size: 1.15rem;
+    }
+    .section-list-container {
+        text-align: center;
+    }
+    .section-list {
+        color: #000;
+        text-align: center;
+    }
     @include tablet {
         display: flex;
         flex-direction: column;
@@ -95,22 +60,6 @@ body {
     @include desktop {
         flex-grow: 0.2;
     }
-}
-
-.choose-text {
-    color: white;
-    font-family: "OpenSans", sans-serif;
-    font-weight: lighter;
-    font-size: 1.15rem;
-}
-
-.section-list-container {
-    text-align: center;
-}
-
-.section-list {
-    color: #000;
-    text-align: center;
 }
 
 /* Section List drop down */
@@ -126,6 +75,20 @@ select {
     flex-wrap: wrap;
     flex-direction: row;
     max-width: 100%;
+    a:last-child {
+    height: 30rem;
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    .article-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+    }
 }
 
 .news-item-container {
@@ -151,10 +114,9 @@ select {
     display: flex;
     padding: 0 0.4rem 0 0.4rem;
     width: 100%;
-}
-
-.text-block-p {
-    line-height: 1.5rem;
+    p {
+        line-height: 1.5rem;
+    }
 }
 
 /* Footer Section */
