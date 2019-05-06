@@ -391,6 +391,16 @@ body {
           -ms-flex-pack: start;
               justify-content: flex-start; } }
 
+.loading-gif-div {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.loading-gif {
+  display: none;
+  width: 6rem;
+  height: 6rem; }
+
 .nyt-img {
   width: 35%;
   height: 40%;
@@ -466,6 +476,9 @@ select {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   max-width: 100%; }
 
 .news-item-container {

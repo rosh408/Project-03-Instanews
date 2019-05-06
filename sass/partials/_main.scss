@@ -34,6 +34,16 @@ body {
     }
 }
 
+.loading-gif-div {
+    justify-content: center;
+}
+
+.loading-gif {
+    display: none;
+    width: 6rem;
+    height: 6rem;
+}
+
 .nyt-img {
     width: 35%;
     height: 40%;
@@ -100,6 +110,7 @@ select {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
     max-width: 100%;
 }
 

@@ -3,14 +3,12 @@ $(function(){
   $('.section-list').on('change', function(){
     const category = $(this).val();
     $('header').addClass('active');
-
+    $('.loading-gif').show();
     $.ajax({
       method: 'get',
       url: 'https://api.nytimes.com/svc/topstories/v2/'+ category + '.json?api-key=n8C2eF8jDItIXtbM7nYFtYbPiZax89hp'
     })
-
     .done(function(data){ // Start of done function()
-
       const filterData = data.results.filter(function(article){
         return article.multimedia[4] !== undefined;
       });
@@ -28,13 +26,12 @@ $(function(){
         </a>`;
         $('.main-section').append(newsTemplate);
       });// End of each
-
     }) // End of done function()
     .fail(function(){
-
+      $('.main-section').append('Sorry there was an error!');
     }) // End of fail function()
     .always(function(){
-
+    $('.loading-gif').hide();
     }) // End of always function()
   }); // End of click function ()
 
