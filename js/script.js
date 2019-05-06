@@ -1,8 +1,8 @@
 $(function(){
 
   $('.section-list').on('change', function(){
-
     const category = $(this).val();
+    $('header').addClass('active');
 
     $.ajax({
       method: 'get',
@@ -10,22 +10,22 @@ $(function(){
     })
 
     .done(function(data){ // Start of done function()
-      // console.log(data.results);
 
-      // filter() and slice()
       const filterData = data.results.filter(function(article){
         return article.multimedia[4] !== undefined;
       });
-      const articleLink = filterData.slice(3);
+      const articleLink = filterData.slice(0,12);
+      console.log(articleLink);
+      $('.main-section').html('');
       $.each(articleLink, function(index, article) {
-
         const articleUrl = article.url;
         const articleImage = article.multimedia[4].url;
-        const newsTemplate = `<a href="${articleUrl}"><img src="${articleImage}"><div><p>${article.abstract}</p></div></a>`;
-        $('.main-section a').addClass('news-item-container');
-        $('.main-section img').addClass('article-image');
-        $('.main-section div').addClass('text-block');
-        $('.main-section p').addClass('text-block-p');
+        const newsTemplate = `<a href="${articleUrl}" class="news-item-container">
+        <img class="article-image" src="${articleImage}">
+        <div class="text-block">
+        <p class="text-block-p">${article.abstract}</p>
+        </div>
+        </a>`;
         $('.main-section').append(newsTemplate);
       });// End of each
 

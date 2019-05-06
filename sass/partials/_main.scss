@@ -8,6 +8,7 @@ body {
     max-width: 1600px;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
+    background-color: #000;
 }
 
 * {
@@ -19,13 +20,14 @@ body {
 .header-section {
     background-color: black;
     text-align: center;
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-grow: 1;
     @include tablet{
-        justify-content: flex-start;
+        justify-content: center;
         flex-direction: row;
+        padding-bottom: 1.8rem;
     }
     @include desktop {
         justify-content: flex-start;
@@ -33,8 +35,17 @@ body {
 }
 
 .nyt-img {
+    width: 35%;
+    height: 40%;
+    align-self: center;
+    @include tablet {
+        width: 14vw;
+        margin-right: 5rem;
+    }
     @include desktop {
-        flex-grow: 0.09;           
+        width: 20vw;
+        // flex-grow: 0.10;
+        margin-left: 5rem;
     }
 }
 
@@ -62,6 +73,21 @@ body {
     }
 }
 
+// Header on change event
+.active {
+    flex-grow: 0;
+    padding-bottom: 2rem;
+    .nyt-img {
+        @include tablet {
+            padding-top: 2rem;
+        }
+        @include desktop {
+            width: 10vw;
+            // padding-top: 2rem;
+        }
+    }
+}
+
 /* Section List drop down */
 select {
     background: #fff;
@@ -75,29 +101,21 @@ select {
     flex-wrap: wrap;
     flex-direction: row;
     max-width: 100%;
-    a:last-child {
-    height: 30rem;
-    width: 50%;
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    .article-image {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    }
-    }
 }
 
 .news-item-container {
     height: 30rem;
-    width: 50%;
+    width: 100%;
     position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    @include tablet {
+        width: 50%;
+    }
+    @include desktop {
+        width: 25%;
+    }
 }
 
 .article-image {
@@ -123,7 +141,7 @@ select {
 .footer-section {
     background-color: black;
     text-align: center;
-    flex-grow: 0.5;
+    padding: 2rem 0 2rem 0;
     @include tablet {
         flex-grow: 0.2;
     }

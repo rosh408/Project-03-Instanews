@@ -351,7 +351,8 @@ body {
   color: #ffffff;
   max-width: 1600px;
   font-size: 16px;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  background-color: #000; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -361,9 +362,6 @@ body {
 .header-section {
   background-color: black;
   text-align: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -373,27 +371,39 @@ body {
           flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
   @media (min-width: 600px) {
     .header-section {
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
-              flex-direction: row; } }
+              flex-direction: row;
+      padding-bottom: 1.8rem; } }
   @media (min-width: 1000px) {
     .header-section {
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start; } }
 
-@media (min-width: 1000px) {
-  .nyt-img {
-    -webkit-box-flex: 0.09;
-        -ms-flex-positive: 0.09;
-            flex-grow: 0.09; } }
+.nyt-img {
+  width: 35%;
+  height: 40%;
+  -ms-flex-item-align: center;
+      align-self: center; }
+  @media (min-width: 600px) {
+    .nyt-img {
+      width: 14vw;
+      margin-right: 5rem; } }
+  @media (min-width: 1000px) {
+    .nyt-img {
+      width: 20vw;
+      margin-left: 5rem; } }
 
 .options-container .choose-text {
   color: white;
@@ -427,6 +437,18 @@ body {
         -ms-flex-positive: 0.2;
             flex-grow: 0.2; } }
 
+.active {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  padding-bottom: 2rem; }
+  @media (min-width: 600px) {
+    .active .nyt-img {
+      padding-top: 2rem; } }
+  @media (min-width: 1000px) {
+    .active .nyt-img {
+      width: 10vw; } }
+
 /* Section List drop down */
 select {
   background: #fff;
@@ -445,29 +467,10 @@ select {
       -ms-flex-direction: row;
           flex-direction: row;
   max-width: 100%; }
-  .main-section a:last-child {
-    height: 30rem;
-    width: 50%;
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end; }
-    .main-section a:last-child .article-image {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      -o-object-fit: cover;
-         object-fit: cover; }
 
 .news-item-container {
   height: 30rem;
-  width: 50%;
+  width: 100%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -478,6 +481,12 @@ select {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end; }
+  @media (min-width: 600px) {
+    .news-item-container {
+      width: 50%; } }
+  @media (min-width: 1000px) {
+    .news-item-container {
+      width: 25%; } }
 
 .article-image {
   position: relative;
@@ -502,9 +511,7 @@ select {
 .footer-section {
   background-color: black;
   text-align: center;
-  -webkit-box-flex: 0.5;
-      -ms-flex-positive: 0.5;
-          flex-grow: 0.5; }
+  padding: 2rem 0 2rem 0; }
   @media (min-width: 600px) {
     .footer-section {
       -webkit-box-flex: 0.2;
