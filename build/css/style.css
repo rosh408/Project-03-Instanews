@@ -516,7 +516,12 @@ select {
   display: -ms-flexbox;
   display: flex;
   padding: 0 0.4rem 0 0.4rem;
-  width: 100%; }
+  width: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
+  .text-block:hover {
+    background: rgba(0, 0, 0, 0.488);
+    letter-spacing: 0.155px; }
   .text-block p {
     line-height: 1.5rem; }
 

@@ -143,6 +143,11 @@ select {
     display: flex;
     padding: 0 0.4rem 0 0.4rem;
     width: 100%;
+    transition: 0.3s;
+    &:hover {
+    background: rgba(0,0,0,0.488);
+    letter-spacing: 0.155px;
+    }
     p {
         line-height: 1.5rem;
     }

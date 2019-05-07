@@ -28,7 +28,7 @@ $(function(){
       });// End of each
     }) // End of done function()
     .fail(function(){
-      $('.main-section').append('Sorry there was an error!');
+      alert('Sorry there was an error!');
     }) // End of fail function()
     .always(function(){
     $('.loading-gif').hide();
