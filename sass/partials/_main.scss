@@ -28,6 +28,7 @@ body {
         justify-content: center;
         flex-direction: row;
         padding-bottom: 1.8rem;
+        padding-top: 6rem;
     }
     @include desktop {
         justify-content: flex-start;
@@ -45,17 +46,13 @@ body {
 }
 
 .nyt-img {
-    width: 35%;
-    height: 40%;
+    max-width: 35%;
+    max-height: 40%;
     align-self: center;
     @include tablet {
-        width: 14vw;
-        margin-right: 5rem;
     }
     @include desktop {
-        width: 20vw;
-        // flex-grow: 0.10;
-        margin-left: 5rem;
+        padding-left: 4rem;
     }
 }
 
@@ -77,9 +74,12 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding-right: 7rem;
+        padding-left: 2rem;
     }
     @include desktop {
         flex-grow: 0.2;
+        padding-left: 0;
     }
 }
 
@@ -87,13 +87,27 @@ body {
 .active {
     flex-grow: 0;
     padding-bottom: 2rem;
-    .nyt-img {
+    @include tablet {
+        padding-top: 0;
+    }
+    @include desktop {
+    }
+    .options-container {
         @include tablet {
-            padding-top: 2rem;
         }
         @include desktop {
-            width: 10vw;
-            // padding-top: 2rem;
+
+        }
+    }
+    .nyt-img {
+        padding-top: 2rem;
+
+        @include tablet {
+            max-width: 12%;
+            max-height: 12%;
+            
+        }
+        @include desktop {
         }
     }
 }
@@ -121,6 +135,19 @@ select {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    overflow: hidden;
+    img {
+        transition: 0.5s;
+    }
+    &:hover {
+        background: rgba(0,0,0,0.488);
+        img {
+            transform: scale(1.1);
+        }
+        .text-block {
+            padding-bottom: 0.5rem;
+        }
+    }
     @include tablet {
         width: 50%;
     }
@@ -138,16 +165,13 @@ select {
 
 .text-block {
     position: absolute;
-    background: rgba(0,0,0,0.57);
+    background: rgba(0,0,0,0.60);
     color: white;
     display: flex;
     padding: 0 0.4rem 0 0.4rem;
     width: 100%;
     transition: 0.3s;
-    &:hover {
-    background: rgba(0,0,0,0.488);
-    letter-spacing: 0.155px;
-    }
+
     p {
         line-height: 1.5rem;
     }
