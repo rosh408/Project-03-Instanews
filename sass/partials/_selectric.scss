@@ -1,14 +1,34 @@
 .section-list-container {
     align-self: center;
+    text-align: center;
+   
+}
+
+.selectric-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .selectric {
     // background-color: black;
     width: 10rem;
-    color: white;
-    // align-self: center;
+    border-radius: 4px 4px 4px 4px;
+    justify-content: center;
+
+    .label {
+        font-size: 1.01111rem;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 500;
+    }
 }
 
 .selectric-scroll {
     color: white;
+    ul {
+        li {
+            font-size: 1.01111rem;
+            font-weight: 300;
+        }
+    }
 }

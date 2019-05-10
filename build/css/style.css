@@ -602,11 +602,31 @@ select {
 
 .section-list-container {
   -ms-flex-item-align: center;
-      align-self: center; }
+      align-self: center;
+  text-align: center; }
+
+.selectric-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%; }
 
 .selectric {
   width: 10rem;
-  color: white; }
+  border-radius: 4px 4px 4px 4px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .selectric .label {
+    font-size: 1.01111rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500; }
 
 .selectric-scroll {
   color: white; }
+  .selectric-scroll ul li {
+    font-size: 1.01111rem;
+    font-weight: 300; }
