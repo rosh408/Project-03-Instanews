@@ -1,12 +1,13 @@
 $(function(){
 
   $('select').selectric();
-  
+
   $('.section-list').on('change', function(){
     const category = $(this).val();
+    const $loadGif = $('.loading-gif');
     $('header').addClass('active-header');
     $('footer').addClass('active-footer');
-    $('.loading-gif').show();
+    $loadGif.show();
     $('select').selectric();
     $.ajax({
       method: 'get',
@@ -17,8 +18,8 @@ $(function(){
         return article.multimedia[4] !== undefined;
       });
       const articleLink = filterData.slice(0,12);
-      console.log(articleLink);
-      $('.main-section').html('');
+      const $mainLink = $('.main-section');
+      $mainLink.html('');
       $.each(articleLink, function(index, article) {
         const articleUrl = article.url;
         const articleImage = article.multimedia[4].url;
@@ -28,15 +29,14 @@ $(function(){
         <p class="text-block-p">${article.abstract}</p>
         </div>
         </a>`;
-        $('.main-section').append(newsTemplate);
+        $mainLink.append(newsTemplate);
       });// End of each
     }) // End of done function()
     .fail(function(){
-      // alert('Sorry there was an error!');
     }) // End of fail function()
     .always(function(){
-    $('.loading-gif').hide();
+      $loadGif.hide();
     }) // End of always function()
   }); // End of click function ()
 
-}) // End of jQuery doc ready
+}); // End of jQuery doc ready

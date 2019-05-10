@@ -24,6 +24,8 @@ body {
     justify-content: center;
     flex-grow: 1;
     padding-bottom: 4rem;
+    transition: 2s;
+
     @include tablet{
         justify-content: center;
         flex-direction: row;
