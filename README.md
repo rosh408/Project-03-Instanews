@@ -1,14 +1,17 @@
 # Instanews App 
 
-Key notes: 
-
-## Header Section
+## index.html 
 
 Contains: 
 
-## Main Section 
+## _main.scss
 
 Contains: 
 
-## Footer Section
+## script.js
+
+Contains: 
+
+What I've learned:
+
 

@@ -2,21 +2,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta name="hello" charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="hello" http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Instanews</title>
     <link rel="stylesheet" href="./build/css/style.min.css">
-    <!-- <link rel="stylesheet" href="./css/transfonter.org-20190429-220306/"> -->
 </head>
 
 <body>
     <header class="header-section"> <!-- Start of header-section -->
-        <img class="nyt-img" src="/assets/images/nyt-logo.svg">
+        <img class="nyt-img" src="/assets/images/nyt-logo.svg" alt="New York Times Logo">
         <div class="options-container">
-            <h5 class="choose-text">Choose a section:</h5>
+            <label for="select-form" class="choose-text">Choose a section:</label>
             <div class="section-list-container">
-                <select class="section-list">
+                <select id="select-form" class="section-list">
                     <option value="">Sections...</option>
                     <option value="home">Home</option>
                     <option value="arts">Arts</option>
@@ -28,13 +27,11 @@
             </div> <!-- End of section-list-container -->
         </div> <!-- End of options-container -->
     </header> <!-- End of header-section -->
-
     <main class="main-section"> <!-- Start of main-section -->
         <div class="loading-gif-div">
-        <img class="loading-gif" src="assets/images/ajax-loader.gif">
+        <img class="loading-gif" src="assets/images/ajax-loader.gif" alt="A loading gif">
         </div>
     </main> <!-- End of main-section -->
-
     <footer class="footer-section">
         <h5 class="copyright-text">&copy; Copyright 2016 INSTANEWS</h5>
     </footer>

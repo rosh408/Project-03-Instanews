@@ -12,7 +12,6 @@ body {
 }
 
 * {
-    // border: 1px solid lightcoral;
     box-sizing: border-box;
 }
 
@@ -24,6 +23,7 @@ body {
     flex-direction: column;
     justify-content: center;
     flex-grow: 1;
+    padding-bottom: 4rem;
     @include tablet{
         justify-content: center;
         flex-direction: row;
@@ -50,69 +50,91 @@ body {
     max-height: 30%;
     align-self: center;
     flex-grow: 0;
+    padding-top: 10rem;
+    padding-bottom: 2rem;
     @include desktop {
         padding-left: 4rem;
     }
 }
 
 .options-container {
-    .choose-text {
-        color: white;
-        font-family: "OpenSans", sans-serif;
-        font-weight: lighter;
-        font-size: 1.15rem;
-    }
-    .section-list-container {
-        text-align: center;
-    }
-    .section-list {
-        color: #000;
-        text-align: center;
-    }
+    flex-direction: column;
+    justify-content: space-around;
     @include tablet {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
         padding-right: 7rem;
         padding-left: 1rem;
+        // justify-content: center;
     }
     @include desktop {
         flex-grow: 0.2;
         padding-left: 0;
         padding-right: 2rem;
-        
+    }
+    .choose-text {
+        color: white;
+        font-family: "OpenSans", sans-serif;
+        font-weight: lighter;
+        font-size: 1.15rem;
+        padding-bottom: 8rem;
+        @include tablet {
+            padding-top: 12rem;
+            padding-bottom: 0;
+        }
+    }
+    .section-list-container {
+        text-align: center;
+        padding-top: 2rem;
+        @include tablet {
+            padding-top: 0;
+            padding-bottom: 6rem;
+        }
+    }
+    .section-list {
+        color: #000;
+        text-align: center;
     }
 }
 
-// Header on change event
-.active {
+// Header on click/change event
+.active-header {
     flex-grow: 0;
     padding-bottom: 2rem;
     @include tablet {
         padding-top: 0;
-    }
-    @include desktop {
+        padding-bottom: 0;
+        max-height: 9rem;
     }
     .options-container {
-        h5 {
-            font-size: 1rem;
-        }
         @include tablet {
-            // width: 40%;
-            // height: auto;
+            padding-left: 2rem;
         }
         @include desktop {
             padding-right: 14rem;
-
+        }
+        label {
+            font-size: 1.12rem;
+            @include tablet {
+                font-size: 1rem;
+            }
+        }
+        .choose-text {
+            @include tablet {
+                padding-top: 1.5rem;
+            }
+        }
+        .section-list-container {
+            @include tablet {
+                padding-bottom: 2rem;
+            }
         }
     }
     .nyt-img {
         padding-top: 2rem;
         @include tablet {
+            flex-grow: 0;
             max-width: 12%;
             max-height: 12%;
-        }
-        @include desktop {
         }
     }
 }
@@ -176,7 +198,6 @@ select {
     padding: 0 0.4rem 0 0.4rem;
     width: 100%;
     transition: 0.3s;
-
     p {
         line-height: 1.5rem;
     }
@@ -206,4 +227,3 @@ select {
       flex-grow: 0.15;
     }
 }
- 

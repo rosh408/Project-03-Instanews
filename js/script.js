@@ -2,7 +2,8 @@ $(function(){
 
   $('.section-list').on('change', function(){
     const category = $(this).val();
-    $('header').addClass('active');
+    $('header').addClass('active-header');
+    $('footer').addClass('active-footer');
     $('.loading-gif').show();
     $.ajax({
       method: 'get',
