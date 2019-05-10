@@ -441,7 +441,6 @@ body {
   .options-container .choose-text {
     color: white;
     font-family: "OpenSans", sans-serif;
-    font-weight: lighter;
     font-size: 1.15rem;
     padding-bottom: 8rem; }
     @media (min-width: 600px) {
@@ -600,3 +599,14 @@ select {
       -webkit-box-flex: 0.15;
           -ms-flex-positive: 0.15;
               flex-grow: 0.15; } }
+
+.section-list-container {
+  -ms-flex-item-align: center;
+      align-self: center; }
+
+.selectric {
+  width: 10rem;
+  color: white; }
+
+.selectric-scroll {
+  color: white; }

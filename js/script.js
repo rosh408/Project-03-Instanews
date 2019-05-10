@@ -1,10 +1,13 @@
 $(function(){
 
+  $('select').selectric();
+  
   $('.section-list').on('change', function(){
     const category = $(this).val();
     $('header').addClass('active-header');
     $('footer').addClass('active-footer');
     $('.loading-gif').show();
+    $('select').selectric();
     $.ajax({
       method: 'get',
       url: 'https://api.nytimes.com/svc/topstories/v2/'+ category + '.json?api-key=n8C2eF8jDItIXtbM7nYFtYbPiZax89hp'
@@ -29,13 +32,11 @@ $(function(){
       });// End of each
     }) // End of done function()
     .fail(function(){
-      alert('Sorry there was an error!');
+      // alert('Sorry there was an error!');
     }) // End of fail function()
     .always(function(){
     $('.loading-gif').hide();
     }) // End of always function()
   }); // End of click function ()
 
-}); // End of jQuery doc ready
-
- 
+}) // End of jQuery doc ready
