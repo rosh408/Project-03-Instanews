@@ -46,11 +46,10 @@ body {
 }
 
 .nyt-img {
-    max-width: 35%;
-    max-height: 40%;
+    max-width: 30%;
+    max-height: 30%;
     align-self: center;
-    @include tablet {
-    }
+    flex-grow: 0;
     @include desktop {
         padding-left: 4rem;
     }
@@ -75,11 +74,13 @@ body {
         flex-direction: column;
         justify-content: center;
         padding-right: 7rem;
-        padding-left: 2rem;
+        padding-left: 1rem;
     }
     @include desktop {
         flex-grow: 0.2;
         padding-left: 0;
+        padding-right: 2rem;
+        
     }
 }
 
@@ -93,19 +94,23 @@ body {
     @include desktop {
     }
     .options-container {
+        h5 {
+            font-size: 1rem;
+        }
         @include tablet {
+            // width: 40%;
+            // height: auto;
         }
         @include desktop {
+            padding-right: 14rem;
 
         }
     }
     .nyt-img {
         padding-top: 2rem;
-
         @include tablet {
             max-width: 12%;
             max-height: 12%;
-            
         }
         @include desktop {
         }
