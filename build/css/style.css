@@ -617,15 +617,15 @@ select {
   width: 100%; }
 
 .selectric {
-  width: 10rem;
-  border-radius: 4px 4px 4px 4px;
+  width: 9rem;
+  height: 2.6rem;
+  border-radius: 10px 10px 10px 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
   .selectric .label {
     font-size: 1.01111rem;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 500; }
+    font-family: 'Open Sans', sans-serif; }
 
 .selectric-scroll {
   color: white; }
