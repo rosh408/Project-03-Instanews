@@ -5,6 +5,7 @@ $(function () {
   $('.section-list').on('change', function () {
     const category = $(this).val();
     const $loadGif = $('.loading-gif');
+    const $mainLink = $('.main-section');
     $('header').addClass('active-header');
     $('footer').addClass('active-footer');
     $loadGif.show();
@@ -18,7 +19,6 @@ $(function () {
           return article.multimedia[4] !== undefined;
         });
         const articleLink = filterData.slice(0, 12);
-        const $mainLink = $('.main-section');
         $mainLink.html('');
         $.each(articleLink, function (index, article) {
           const articleUrl = article.url;
@@ -33,7 +33,8 @@ $(function () {
         });// End of each
       }) // End of done function()
       .fail(function () {
-        alert('Sorry there was an error!');
+        const failMssgTemplate = `<p class="fail-message">Sorry! There was a problem, please try again</p>`;
+        $mainLink.append(failMssgTemplate);
       }) // End of fail function()
       .always(function () {
         $loadGif.hide();

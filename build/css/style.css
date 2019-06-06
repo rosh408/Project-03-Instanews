@@ -441,7 +441,7 @@ body {
       padding-left: 0;
       padding-right: 2rem; } }
   .options-container .choose-text {
-    color: white;
+    color: #fff;
     font-family: "OpenSans", sans-serif;
     font-size: 1.15rem;
     padding-bottom: 8rem; }
@@ -560,7 +560,7 @@ select {
 .text-block {
   position: absolute;
   background: rgba(0, 0, 0, 0.6);
-  color: white;
+  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

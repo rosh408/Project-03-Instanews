@@ -8,7 +8,7 @@ body {
     max-width: 1600px;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
-    background-color: #000;
+    background-color: $black;
 }
 
 * {
@@ -72,7 +72,7 @@ body {
         padding-right: 2rem;
     }
     .choose-text {
-        color: white;
+        color: $white;
         font-family: "OpenSans", sans-serif;
         font-size: 1.15rem;
         padding-bottom: 8rem;
@@ -90,7 +90,7 @@ body {
         }
     }
     .section-list {
-        color: #000;
+        color: $black;
         text-align: center;
     }
 }
@@ -141,7 +141,7 @@ body {
 /* Section List drop down */
 select {
     background: #fff;
-    color: #000;
+    color: $black;
     font-size: 1rem;
 }
 
@@ -192,7 +192,7 @@ select {
 .text-block {
     position: absolute;
     background: rgba(0,0,0,0.60);
-    color: white;
+    color: $white;
     display: flex;
     padding: 0 0.4rem 0 0.4rem;
     width: 100%;
