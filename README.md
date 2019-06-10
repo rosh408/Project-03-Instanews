@@ -19,13 +19,15 @@ Personal Learnings:
 
 Personal learnings: 
 - Using the slice() and filter() methods gave me a better understanding of how the browser was grabbing each individual item from the API. 
+![alt text](assets/images/screenshots/slice-filter.png)
 - Adding multiple css styling to elements through jQuery is a huge hassle and it is better to use the addClass() methods and styling them later in _main.scss.
 - Inserting a dynamic variable (category) in the New York Times URL was a useful part of the API process because it would automatically grab the right article images and texts from new york times according to what was clicked ( const category = $(this).val(); )
 
 
 ## Installations 
 
-- Installed a jQuery plug in that gave my dropdown menu bar some styling which came with it.
+- Installed a jQuery plug in that gave my dropdown menu bar some styling which came with it. (This was also my stretch goal)
+![alt text](assets/images/screenshots/selectric.png)
 - This plug in requires that I add a given script tag on their webpage to the bottom of the body tag under my index.html.
 - A new partials folder was an important asset of the plug in to add my own styling.
 - Which also meant I had to include another @import tag in the styles.scss folder (@import 'partials/selectric';)
